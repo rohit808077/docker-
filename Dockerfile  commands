@@ -1,0 +1,41 @@
+Understanding Dockerfile Commands
+
+---
+
+**1. 
+FROM:**
+The `FROM` instruction sets the base image for subsequent instructions. In this case, it uses the OpenJDK 11 image as the foundation for our Docker image. It's like saying, "Start with an image that has OpenJDK 11 installed."
+
+---
+
+**2. WORKDIR:**
+The `WORKDIR` command sets the working directory within the container. In this example, it establishes `/app` as the directory where subsequent commands will be executed. It's a way to organize files and operations within the container.
+
+---
+
+**3. COPY:**
+The `COPY` command copies files from the host machine to the container. Here, it copies the file `Hello.java` from the host to the `/app` directory in the container. This is crucial for getting your application code into the image.
+
+---
+
+**4. RUN:**
+The `RUN` command executes commands in a new layer on top of the current image and commits the results. In this Dockerfile, it compiles the `Hello.java` code using the `javac` compiler. The result is that the container now has the compiled Java class ready for execution.
+
+---
+
+**5. Comments:**
+Comments in the Dockerfile, denoted by `#`, are for human readability. They explain each step's purpose. In this Dockerfile, comments clarify the purpose of the base image, working directory, code copy, compilation, and readiness for execution.
+
+---
+
+**6. Overall Process:**
+- Start with OpenJDK 11 as the base image.
+- Set the working directory to `/app`.
+- Copy the `Hello.java` file into the `/app` directory.
+- Run the `javac` compiler to compile `Hello.java` into `Hello.class`.
+- The Docker image is now prepared to run the Java application.
+
+---
+
+**Note:**
+The last comment suggests that the actual run commands are passed as arguments. While not explicitly shown in this snippet, it could imply running the compiled Java application using a command like `CMD` or `ENTRYPOINT` further down in the Dockerfile.
