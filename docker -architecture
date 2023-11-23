@@ -1,0 +1,7 @@
+"Excited to share insights into Docker architecture! 🐳 Understanding the trio: 
+
+1️⃣ **Docker Daemon (`dockerd`):** The powerhouse behind Docker, managing containers, images, networks, and volumes. It's the silent engine making container magic happen in the background.
+
+2️⃣ **Container Daemon (`containerd`):** Meet the backbone of container operations. `containerd` simplifies, strengthens, and ensures portability – a key player working hand in hand with `dockerd`.
+
+3️⃣ **Docker CLI:** Your gateway to the Docker universe. With the CLI, we command, build, and orchestrate containers effortlessly. It's the language we speak to tell Docker what to do.
